@@ -1,9 +1,13 @@
 import { FC } from "react";
 
-const DayCard: FC = () => {
+type DayCardProps = {
+    index: number;
+};
+
+const DayCard: FC<DayCardProps> = ({ index }) => {
     return (
         <li className="text-center border-black border-2 font-medium rounded-lg shadow-md shadow-gray-300">
-            <button>Day 3</button>
+            <button>Day {index + 1}</button>
         </li>
     );
 };
